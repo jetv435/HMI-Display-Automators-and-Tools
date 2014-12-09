@@ -4,9 +4,10 @@ from FunctionPackages.convert_Flash import cStep_Flash
 from FunctionPackages.convert_RAM import cStep_RAM
 from FunctionPackages.convert_ExternVar import cStep_Extern
 from FunctionPackages.convert_Bitmaps import cStep_Bitmaps
+from FunctionPackages.parse_Header import *
 
 DEBUG = False
-# DEBUG = True
+DEBUG = True
 
 def Main():
 
