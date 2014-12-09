@@ -89,14 +89,17 @@ def header_edit(pData, externInfo, flashInfo, ramInfo):
                 lcd_grph.writelines('\n')
                 for k in ramInfo:
                     lcd_grph.writelines(k)
-            elif i == pData[1][1] + 1:
+            elif i == pData[1][1]:
+                lcd_grph.writelines(hedit_flashend())
+                continue
+
             lcd_grph.writelines(headerLines[i])
 
         lcd_grph.close()
         os.chdir('..')
 
     def hedit_flashend():
-        pass
+        return '#define FLASH_ADDR_SIZE									((FLASH_ADDR_*REPLACE_ME*+sizeof(*replace_me*)+2)-FLASH_EXTERN_START_ADDR)\n'
 
     def hedit_ALL():
         headerLines = hedit_read()
