@@ -7,7 +7,7 @@ from FunctionPackages.convert_Bitmaps import cStep_Bitmaps
 from FunctionPackages.parse_Header import *
 
 DEBUG = False
-DEBUG = True
+# DEBUG = True
 
 def Main():
 
@@ -21,6 +21,9 @@ def Main():
         chunk_RAM = cStep_RAM()
 
         cStep_Bitmaps()
+
+        data = header_identify()
+        header_edit(data, chunk_Extern, chunk_Flash, chunk_RAM)
         print('DONE')
 
 Main()
