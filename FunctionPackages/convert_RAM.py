@@ -31,7 +31,7 @@ def cStep_RAM():
 
         os.chdir('output')
 
-        filename = 'ramTXT.txt'
+        filename = 'ramTXT.h'
         pasteFile = open(filename, 'w')
 
         for i in pasteList:

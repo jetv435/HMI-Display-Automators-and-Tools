@@ -39,7 +39,7 @@ def cStep_Flash(previous):
 
         os.chdir('output')
 
-        filename = 'flashTXT.txt'
+        filename = 'flashTXT.h'
         pasteFile = open(filename, 'w')
 
         for i in pasteList:

@@ -85,7 +85,7 @@ def cStep_Extern():
 
         os.chdir('output')
 
-        filename = 'externTXT.txt'
+        filename = 'externTXT.h'
         pasteFile = open(filename, 'w')
 
         for i in pasteList:
