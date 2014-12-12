@@ -99,7 +99,10 @@ def header_edit(pData, externInfo, flashInfo, ramInfo):
         os.chdir('..')
 
     def hedit_flashend():
-        return '#define FLASH_ADDR_SIZE									((FLASH_ADDR_*REPLACE_ME*+sizeof(*replace_me*)+2)-FLASH_EXTERN_START_ADDR)\n'
+        endcaps = '*REPLACE_ME*'
+        endlower = '*replace_me*'
+
+        return '#define FLASH_ADDR_SIZE                               ((FLASH_ADDR_{}+sizeof({})+2)-FLASH_EXTERN_START_ADDR)\n'.format(endcaps, endlower)
 
     def hedit_ALL():
         headerLines = hedit_read()

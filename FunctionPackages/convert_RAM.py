@@ -43,7 +43,7 @@ def cStep_RAM():
         return pasteList
 
     def ram_Read():
-        os.chdir('bitmaps_In')
+        os.chdir('bitmaps_IN')
         bitmapList = os.listdir()
         os.chdir('..')
         return bitmapList

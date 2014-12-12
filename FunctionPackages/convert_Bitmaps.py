@@ -3,7 +3,7 @@ import os
 def cStep_Bitmaps():
 
     def bitmaps_Read():
-        os.chdir('bitmaps_In')
+        os.chdir('bitmaps_IN')
         bitmapList = os.listdir()
         os.chdir('..')
         return bitmapList
@@ -51,7 +51,7 @@ def cStep_Bitmaps():
         for i in input:
             newlines = bitmaps_convert(i)
 
-            os.chdir(os.path.join('output', 'Bitmaps_OUT'))
+            os.chdir(os.path.join('output', 'bitmaps_OUT'))
             filename = i
             bitmapfile = open(filename, 'w')
 

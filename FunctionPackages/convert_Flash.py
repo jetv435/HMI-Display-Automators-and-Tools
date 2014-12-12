@@ -51,7 +51,7 @@ def cStep_Flash(previous):
         return pasteList
 
     def flash_Read():
-        os.chdir('bitmaps_In')
+        os.chdir('bitmaps_IN')
         bitmapList = os.listdir()
         os.chdir('..')
         return bitmapList

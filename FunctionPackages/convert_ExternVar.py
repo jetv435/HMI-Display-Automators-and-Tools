@@ -20,11 +20,13 @@ def cStep_Extern():
     def extern_bitmapInfo(index, input): # input is a list of bitmap file names,
                                     #  index is the location of the current file in the list
 
-        os.chdir('bitmaps_In')
+        os.chdir('bitmaps_IN')
 
         filename = input[index]
         bitmapfile = open(filename, 'r')
+
         bitmaplines = bitmapfile.readlines()
+
         bitmapfile.close()
         os.chdir('..')
 
@@ -35,7 +37,7 @@ def cStep_Extern():
     def extern_bitmapSize(index, input): # input is a list of bitmap file names,
                                     #  index is the location of the current file in the list
 
-        os.chdir('bitmaps_In')
+        os.chdir('bitmaps_IN')
 
         filename = input[index]
         bitmapfile = open(filename, 'r')
@@ -75,7 +77,7 @@ def cStep_Extern():
         return pasteList
 
     def extern_Read():
-        os.chdir('bitmaps_In')
+        os.chdir('bitmaps_IN')
         bitmapList = os.listdir()
         os.chdir('..')
         return bitmapList
