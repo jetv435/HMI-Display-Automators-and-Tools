@@ -25,7 +25,11 @@ def cStep_Extern():
         filename = input[index]
         bitmapfile = open(filename, 'r')
 
-        bitmaplines = bitmapfile.readlines()
+        try:
+            bitmaplines = bitmapfile.readlines()
+        except:
+            print(bitmapfile)
+            return 'ERROR'
 
         bitmapfile.close()
         os.chdir('..')

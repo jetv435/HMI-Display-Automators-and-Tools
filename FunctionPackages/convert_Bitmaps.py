@@ -25,7 +25,7 @@ def cStep_Bitmaps():
         baseCaps = baseName.upper()
         flash = 'FLASH_ADDR_{}'.format(baseCaps)
 
-        newLine = 'const unsigned short {}[/*{}*/] __at__({}) = {{ \n'.format(bitname, size, flash)
+        newLine = 'const unsigned short {}[/*{}*/] __at({}) = {{ \n'.format(bitname, size, flash)
 
         return newLine
 
